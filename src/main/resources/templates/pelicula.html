@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{master.html}">
+<head>
+    <meta charset="UTF-8">
+    <title th:inline="text">[[${pelicula.titulo}]] | CineTrailer</title>
+</head>
+<body>
+
+<div layout:fragment="content" th:object="${pelicula}">
+    <div class="row">
+        <div class="col-md-6">
+            <img th:src="@{/assets/{filename}(filename=*{rutaPortada})}"
+                 th:alt="*{titulo}"
+                 class="img-fluid rounded w-100">
+        </div>
+        <div class="col-md-6">
+            <!parte de trailer
+
+            </div>
+
+            <h2 th:text="*{titulo}"></h2>
+
+            <div class="mb-3">
+                <span class="badge rounded-pull bg-light text-dark me-1"
+                      th:each="genero : *{generos}"
+                      th:text="${genero.titulo}"></span>
+            </div>
+            <p th:text="*{sinopsis}"></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
