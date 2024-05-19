@@ -35,5 +35,11 @@ public class  AdminController {
                 .addObject("peliculas", peliculas);
     }
 
-
+    @PostMapping("/peliculas/{id}/eliminar")
+    String eliminarPelicula(@PathVariable Integer id) {
+        Pelicula pelicula = peliculaRepository.getOne(id);
+        peliculaRepository.delete(pelicula);
+        fileSystemStorageService.delete(pelicula.getRutaPortada());
+        return "redirect:/admin";
+    }
 }
