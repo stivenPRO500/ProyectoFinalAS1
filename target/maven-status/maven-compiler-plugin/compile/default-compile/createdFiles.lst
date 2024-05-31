@@ -1,0 +1,12 @@
+com\example\cinetrailer\exception\FileException.class
+com\example\cinetrailer\model\Genero.class
+com\example\cinetrailer\repo\PeliculaR.class
+com\example\cinetrailer\controller\AdminController.class
+com\example\cinetrailer\controller\Controller.class
+com\example\cinetrailer\model\Pelicula.class
+com\example\cinetrailer\CinetrailerApplication.class
+com\example\cinetrailer\controller\AController.class
+com\example\cinetrailer\service\FileSystemStorageService.class
+com\example\cinetrailer\repo\GeneroR.class
+com\example\cinetrailer\service\StorageService.class
+com\example\cinetrailer\exception\StoException.class
