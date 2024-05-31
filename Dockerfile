@@ -1,4 +1,4 @@
-FROM amzoncorretto:8-alpine-jdk
+FROM amzoncorretto:11.0.12-alpine-jdk
 
 COPY target/cinetrailer-0.0.1-SNAPSHOT.jar app.jar
 
